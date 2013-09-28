@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: organizations
+#
+#  id          :integer          not null, primary key
+#  name        :string(255)
+#  location    :string(255)
+#  discription :text
+#  created_at  :datetime
+#  updated_at  :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  location: MyString
+  discription: MyText
+
+two:
+  name: MyString
+  location: MyString
+  discription: MyText

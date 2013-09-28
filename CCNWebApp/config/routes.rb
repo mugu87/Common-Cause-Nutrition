@@ -1,6 +1,10 @@
 CCNWebApp::Application.routes.draw do
 
 
+  resources :organizations
+
+  resources :donations
+
   devise_for :users
   get "welcome/index"
   root :to => "welcome#index"

@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130928165017) do
+ActiveRecord::Schema.define(version: 20130928175035) do
+
+  create_table "donations", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.decimal  "amount"
+  end
+
+  create_table "organizations", force: true do |t|
+    t.string   "name"
+    t.string   "location"
+    t.text     "discription"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -27,6 +41,7 @@ ActiveRecord::Schema.define(version: 20130928165017) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin"
+    t.integer  "Height"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
