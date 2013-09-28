@@ -15,7 +15,12 @@
 #  last_sign_in_ip        :string(255)
 #  created_at             :datetime
 #  updated_at             :datetime
-#  Height                 :integer
+#  name                   :string(255)
+#  height                 :integer
+#  weight                 :integer
+#  sex                    :string(255)
+#  total_calorie_in       :integer
+#  total_calorie_out      :integer
 #
 
 class StUser < User
