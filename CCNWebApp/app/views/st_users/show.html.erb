@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<div id='chart'></div>
+<%= render_chart(@chart, 'chart') %>
+
 <p>
   <strong>Name:</strong>
   <%= @st_user.name %>
