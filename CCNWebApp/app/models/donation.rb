@@ -2,10 +2,12 @@
 #
 # Table name: donations
 #
-#  id         :integer          not null, primary key
-#  created_at :datetime
-#  updated_at :datetime
-#  amount     :decimal(, )
+#  id              :integer          not null, primary key
+#  created_at      :datetime
+#  updated_at      :datetime
+#  amount          :decimal(, )
+#  stu_user_ID     :integer
+#  Organization_ID :integer
 #
 
 class Donation < ActiveRecord::Base

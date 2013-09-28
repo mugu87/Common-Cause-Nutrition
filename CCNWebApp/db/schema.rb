@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130928192152) do
+ActiveRecord::Schema.define(version: 20130928201352) do
 
   create_table "calories", force: true do |t|
     t.integer  "intake"
@@ -24,6 +24,8 @@ ActiveRecord::Schema.define(version: 20130928192152) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.decimal  "amount"
+    t.integer  "stu_user_ID"
+    t.integer  "Organization_ID"
   end
 
   create_table "organizations", force: true do |t|
