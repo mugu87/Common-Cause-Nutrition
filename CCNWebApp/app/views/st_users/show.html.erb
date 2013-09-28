@@ -1,7 +1,23 @@
 <p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div class="row-fluid">
+        <div class="span6 blue">
+          <p>hellow</p>
+          <p id='chart'></p>
+          <%= render_chart(@chart, 'chart') %>
+        </div>
+        <div class="span4 orange">
+          <p>nooo</p>
+        </div>
+        <div class="span4 blue">
+          <p>htrfd</p>
+        </div>
+        <div class="span4 orange">
+          <p>ffds</p>
+        </div>
+  </div>
+</div>
 
-<div id='chart'></div>
-<%= render_chart(@chart, 'chart') %>
 
 <p>
   <strong>Name:</strong>
