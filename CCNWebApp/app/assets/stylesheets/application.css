@@ -10,7 +10,12 @@
  * .
  */
 
+<<<<<<< HEAD
 /*  = require_self
+=======
+  = require_self
+ *= require bootstrap_and_overrides
+>>>>>>> 1e157afc3746c28b6fffb900d505627f536542d7
   = require_tree
 
 @import url("bootstrap.min.css");
