@@ -15,7 +15,6 @@ class StUsersController < ApplicationController
 
   # GET /st_users/new
   def new
-    raise params inspect
     @st_user = StUser.new
   end
 
