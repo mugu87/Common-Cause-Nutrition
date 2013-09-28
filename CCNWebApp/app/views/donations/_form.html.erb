@@ -15,9 +15,14 @@
     <%= f.label :amount %><br>
     <%= f.number_field :amount %>
   </div>
+  
+  <div>
+    <%= f.label :organization_id %> <br>
+    <%= f.select :Organization_ID, @myorganization.collect{|c| [c.name]}%>
+  </div>
 
   <div class="field">
-    <%= hidden_field_tag :id, params[:st_user_id] %>
+    <%= hidden_field_tag :st_user_id, params[:format] %>
   </div>
 
   <div class="actions">

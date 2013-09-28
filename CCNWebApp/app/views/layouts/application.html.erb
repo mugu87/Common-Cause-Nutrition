@@ -69,5 +69,15 @@
 
     </div> <!-- /container -->
 
+
+  <% if user_signed_in? %>
+    <%= link_to "Home", st_user_path(current_user) %>
+    <%=  link_to "Sign out", destroy_user_session_path, :method => 'delete' %>
+  <% else %>
+    <%= link_to "Home", root_path %>
+  <% end %>
+
+
+
   </body>
 </html>

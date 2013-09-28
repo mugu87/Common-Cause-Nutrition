@@ -14,6 +14,7 @@ class DonationsController < ApplicationController
 
   # GET /donations/new
   def new
+    @myorganization = Organization.all()
     @donation = Donation.new
   end
 
@@ -24,7 +25,6 @@ class DonationsController < ApplicationController
   # POST /donations
   # POST /donations.json
   def create
-    raise params inspect
     @donation = Donation.new(donation_params)
 
     respond_to do |format|
