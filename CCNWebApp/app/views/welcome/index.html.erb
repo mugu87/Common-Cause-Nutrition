@@ -1,11 +1,15 @@
 <div class="row-fluid">
 	<div class="span4 blue">
+		<p>hellow</p>
 	</div>
 	<div class="span4 orange">
+		<p>fs</p>
 	</div>
 	<div class="span4 blue">
+		<p>htrfd</p>
 	</div>
 	<div class="span4 orange">
+		<p>ffds</p>
 	</div>
 </div>
 <h1>Welcome#index</h1>
@@ -14,6 +18,6 @@
 <% if !user_signed_in?  %>
   <h1>Welcome to MyLibrary</h1>
   <br /><br />
-  <%= link_to 'Sign In', new_user_session_path %>
+  <button class="btn btn-primary"><%= link_to 'Sign In', new_user_session_path %></button>
 <% end %>
 
