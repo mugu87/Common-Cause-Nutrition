@@ -11,6 +11,15 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :amount %><br>
+    <%= f.number_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= hidden_field_tag :id, params[:st_user_id] %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -24,6 +24,7 @@ class DonationsController < ApplicationController
   # POST /donations
   # POST /donations.json
   def create
+    raise params inspect
     @donation = Donation.new(donation_params)
 
     respond_to do |format|
@@ -69,6 +70,6 @@ class DonationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def donation_params
-      params[:donation]
+      params[:donation].permit[:amount]
     end
 end

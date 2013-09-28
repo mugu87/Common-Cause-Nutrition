@@ -41,7 +41,8 @@ gem 'devise'
 #annotations
 gem "annotate", "~> 2.5.0"
 
-#twitter bootstrap
+
+#twitter boot strap
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"

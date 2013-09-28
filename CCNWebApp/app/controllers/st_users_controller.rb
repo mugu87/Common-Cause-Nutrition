@@ -10,10 +10,12 @@ class StUsersController < ApplicationController
   # GET /st_users/1
   # GET /st_users/1.json
   def show
+    @mydonations = Donation.where(:st_user_id => current_user)
   end
 
   # GET /st_users/new
   def new
+    raise params inspect
     @st_user = StUser.new
   end
 
