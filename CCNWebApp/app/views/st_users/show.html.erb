@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @st_user.name %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @st_user.height %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @st_user.weight %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @st_user.sex %>
+</p>
+
+<p>
+  <strong>Total calorie in:</strong>
+  <%= @st_user.total_calorie_in %>
+</p>
+
+<p>
+  <strong>Total calorie out:</strong>
+  <%= @st_user.total_calorie_out %>
+</p>
+
+<%= link_to 'Edit', edit_st_user_path(@st_user) %> |
+<%= link_to 'Back', st_users_path %>

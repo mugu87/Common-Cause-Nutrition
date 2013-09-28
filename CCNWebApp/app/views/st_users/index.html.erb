@@ -1,0 +1,37 @@
+<h1>Listing st_users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Sex</th>
+      <th>Total calorie in</th>
+      <th>Total calorie out</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @st_users.each do |st_user| %>
+      <tr>
+        <td><%= st_user.name %></td>
+        <td><%= st_user.height %></td>
+        <td><%= st_user.weight %></td>
+        <td><%= st_user.sex %></td>
+        <td><%= st_user.total_calorie_in %></td>
+        <td><%= st_user.total_calorie_out %></td>
+        <td><%= link_to 'Show', st_user %></td>
+        <td><%= link_to 'Edit', edit_st_user_path(st_user) %></td>
+        <td><%= link_to 'Destroy', st_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New St user', new_st_user_path %>

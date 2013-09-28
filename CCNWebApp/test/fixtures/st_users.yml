@@ -1,0 +1,32 @@
+# == Schema Information
+#
+# Table name: st_users
+#
+#  id                :integer          not null, primary key
+#  name              :string(255)
+#  height            :integer
+#  weight            :integer
+#  sex               :string(255)
+#  total_calorie_in  :integer
+#  total_calorie_out :integer
+#  created_at        :datetime
+#  updated_at        :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  height: 1
+  weight: 1
+  sex: MyString
+  total_calorie_in: 1
+  total_calorie_out: 1
+
+two:
+  name: MyString
+  height: 1
+  weight: 1
+  sex: MyString
+  total_calorie_in: 1
+  total_calorie_out: 1
