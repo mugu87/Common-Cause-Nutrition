@@ -1,6 +1,8 @@
 CCNWebApp::Application.routes.draw do
 
 
+  resources :calories
+
   resources :st_users
 
   resources :organizations

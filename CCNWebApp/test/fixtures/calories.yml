@@ -1,0 +1,20 @@
+# == Schema Information
+#
+# Table name: calories
+#
+#  id         :integer          not null, primary key
+#  intake     :integer
+#  outtake    :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  intake: 1
+  outtake: 1
+
+two:
+  intake: 1
+  outtake: 1

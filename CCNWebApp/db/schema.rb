@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130928190443) do
+ActiveRecord::Schema.define(version: 20130928192152) do
+
+  create_table "calories", force: true do |t|
+    t.integer  "intake"
+    t.integer  "outtake"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "donations", force: true do |t|
     t.datetime "created_at"

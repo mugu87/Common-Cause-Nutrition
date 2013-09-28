@@ -26,4 +26,5 @@
 class StUser < User
   has_many :donations
   belongs_to :organization
+  has_many :calories
 end
