@@ -12,4 +12,5 @@
 
 class Organization < ActiveRecord::Base
   has_many :donations
+  has_many :st_users
 end

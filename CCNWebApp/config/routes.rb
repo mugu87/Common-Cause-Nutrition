@@ -1,6 +1,8 @@
 CCNWebApp::Application.routes.draw do
 
 
+  resources :st_users
+
   resources :organizations
 
   resources :donations
