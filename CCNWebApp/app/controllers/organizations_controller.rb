@@ -27,11 +27,11 @@ class OrganizationsController < ApplicationController
       ['four',85]
 
     ])
-    option = { :backgroundColor => '#FF7300', pieHole: 0.5,
+    option = { width: 400, height: 190, :backgroundColor => '#FF7300', pieHole: 0.5,
                legend:{position:'none'}, titleTextStyle:{ color: 'white',  fontSize: 16,},
-               slices: [{color:'#F85000'}, {color: '#F7982A'}, {color:'#F85000'}, {color: '#F7982A'},{color: '#F85000'},{color: '#45CCA7'}],
+               slices: [{color:'#F85000'}, {color: '#F85000'}, {color:'#F7982A'}, {color: '#F7982A'},{color: '#F7982A'},{color: '#F7982A'}],
                pieSliceText: 'none',
-               tooltip:{trigger: 'none'}, pieSliceBorderColor:'#45CCA7'
+               tooltip:{trigger: 'none'}, pieSliceBorderColor:'#F7982A'
     }
     @chart = GoogleVisualr::Interactive::PieChart.new(data_table, option)
   end
