@@ -19,12 +19,10 @@ class StUsersController < ApplicationController
 
     # Add Rows and Values
     data_table.add_rows([
-        ['one', 1000],
-        ['two', 1170],
-        ['three', 660],
-        ['four', 540],
+        ['one', 1170],
+        ['two', 1170]
     ])
-    option = { width: 400, height: 240, title: 'Company Performance', :backgroundColor => '#0B534B', pieHole: 0.4}
+    option = { width: 500, height: 340, title: 'CALORIE BANK', :backgroundColor => '#0B534B', pieHole: 0.6}
     @chart = GoogleVisualr::Interactive::PieChart.new(data_table, option)
 
 
