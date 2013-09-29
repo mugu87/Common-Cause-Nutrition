@@ -28,6 +28,8 @@ class StUser < User
   belongs_to :organization
   has_many :calories
 
+  $calories_per_dollar = 2000.00
+
   #Note: do not use this method. It is a private, helper method
   def calculate_total_calories(cal)
     sum = 0
@@ -47,6 +49,11 @@ class StUser < User
     sum
   end
 
+  def get_money_for_calories_lost
+    result = self.get_calories_lost_todate / $calories_per_dollar
+    result
+  end
+
   #note
   def get_calories_lost_today
     today_calories = Calory.where("created_at >= ?", Time.zone.now.beginning_of_day)  
@@ -54,8 +61,33 @@ class StUser < User
     sum
   end
 
+  #returns hash.Eg: {:day_one => 1, :day_two => 2, ..., :day_five => 5}
+  def get_org_total_cal_in_five_days
+    five_day_ago = Time.now - 5.days
+    four_day_ago = Time.now - 4.days
+    three_day_ago = Time.now - 3.days
+    two_day_ago = Time.now - 2.days
+    one_day_ago = Time.now - 1.days
+    today  = Time.now
+
+    five_days_ago_tot_cal = Calory.where("updated_at > ? and updated_at < ?", five_day_ago, four_day_ago)
+    four_days_ago_tot_cal = Calory.where("updated_at > ? and updated_at < ?", four_day_ago, three_day_ago)
+    three_days_ago_tot_cal = Calory.where("updated_at > ? and updated_at < ?", three_day_ago, two_day_ago)
+    two_days_ago_tot_cal = Calory.where("updated_at > ? and updated_at < ?", two_day_ago, one_day_ago)
+    one_days_ago_tot_cal = Calory.where("updated_at > ? and updated_at < ?", one_day_ago, today)
+
+    result = {:day_one => calculate_total_calories(five_days_ago_tot_cal),
+              :day_two => calculate_total_calories(four_days_ago_tot_cal),
+              :day_three => calculate_total_calories(three_days_ago_tot_cal),
+              :day_four => calculate_total_calories(two_days_ago_tot_cal),
+              :day_five => calculate_total_calories(one_days_ago_tot_cal),
+    }
+    result
+  end 
+
   #note: can be done in the views
   def get_organizations_list
+    Organization.all
   end
 
   # return an int
