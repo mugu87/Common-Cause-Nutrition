@@ -24,42 +24,43 @@
 #
 
 class StUser < User
-    has_many :donations
-    belongs_to :organization
-    has_many :calories
+  has_many :donations
+  belongs_to :organization
+  has_many :calories
 
-    #Note: do not use this method. It is a private, helper method
-    def calculate_total_calories(cal)
-	sum = 0
-	x = 0
-	while x < cal.size do
-	    puts cal[x][:outtake]
-	    sum = sum + cal[x][:outtake]
-	    x = x + 1
-	end
+  #Note: do not use this method. It is a private, helper method
+  def calculate_total_calories(cal)
+    sum = 0
+    x = 0
+    while x < cal.size do
+      puts cal[x][:outtake]
+      sum = sum + cal[x][:outtake]
+      x = x + 1
     end
+    sum
+  end
 
-    def get_calories_lost_todate
-	#puts @st_user.class.to_s
-	this_user_calories = Calory.where(:user_id => id)
-	sum = calculate_total_calories(this_user_calories)
-	sum
-    end
+  def get_calories_lost_todate
+    #puts @st_user.class.to_s
+    this_user_calories = Calory.where(:user_id => id)
+    sum = calculate_total_calories(this_user_calories)
+    sum
+  end
 
-    #note
-    def get_calories_lost_today
-	today_calories = Calory.where("created_at >= ?", Time.zone.now.beginning_of_day)  
-	sum = calculate_total_calories(today_calories)
-	sum
-    end
+  #note
+  def get_calories_lost_today
+    today_calories = Calory.where("created_at >= ?", Time.zone.now.beginning_of_day)  
+    sum = calculate_total_calories(today_calories)
+    sum
+  end
 
-    #note: can be done in the views
-    def get_organizations_list
-    end
+  #note: can be done in the views
+  def get_organizations_list
+  end
 
-    # return an int
-    def get_balance_to_spend
-    end
+  # return an int
+  def get_balance_to_spend
+  end
 
-    #note: height, weight, and list of organization can be access in the views
+  #note: height, weight, and list of organization can be access in the views
 end
