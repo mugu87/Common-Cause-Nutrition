@@ -13,8 +13,11 @@
           </div>
           <div class="col-md-4 orange1" id="stats">
             <h3 class="centered">STATS ----</h3>
+            
+            <h1 style="font-family:'nexa_lightregular',Arial,sans-serif;font-size:80px;"><%= @organization.stat %><span style="font-size:20px;vertical-align:super;">in</span></h1>
             <ul class="inline">
               <li>
+                <h1 style="font-family:'nexa_lightregular',Arial,sans-serif;font-size:80px;"><%= @oraganization.stats %><span style="font-size:20px;vertical-align:super;">lbs</span></h1>
               </li>
               <li>
                 <!-- <p>lbs</p> -->
@@ -23,7 +26,7 @@
           </div>
           <div class="topRight">
           <div class="col-md-3 blue2">
-            <h3 class="centered" style="margin-top:50px;">PROFILE</h3>
+            <h3 class="centered" style="margin-top:50px;"><a href= '/st_users/1'>PROFILE</a></h3>
           </div>
           <div class="col-md-3 blue3">
             <div class="update" style="margin-top:50px;">
@@ -39,6 +42,9 @@
         <div class="row secondRow">
           <div class="col-md-3 orange2">
           	<h3 class="secHeader">YOUR <br>CALORIES</h3>
+          	<div class="col-md-8 blue1">
+              <p><%= @user.get_calories_lost_todate %><p>
+              </div>
           </div>
           <div class="col-md-5 orange3">
             <h3 class="secHeader">GIVE</h3>
