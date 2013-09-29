@@ -49,6 +49,7 @@ gem "twitter-bootstrap-rails"
 
 gem "google_visualr", ">= 2.1"
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

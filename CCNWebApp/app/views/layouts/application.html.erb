@@ -49,10 +49,13 @@
           </a>
           <a class="brand" href="#">CCNWebApp</a>
           <div class="container-fluid nav-collapse">
-            <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+            <ul class="nav pull-right">
+              <% if user_signed_in? %>
+              <li><%= link_to "Home", st_user_path(current_user), :class => "nav_link"  %></li>
+              <li><%= link_to "Sign out", destroy_user_session_path, :method => 'delete', :class => "nav_link"  %></li>
+              <% else %>
+              <li><%= link_to "Home", st_user_path(current_user), :class => "nav_link"  %></li>
+              <% end %>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -68,15 +71,9 @@
         <p>&copy; Company 2013</p>
       </footer>
 
-    </div> <!-- /container -->
+    <!-- </div> --> <!-- /container -->
 
 
-  <% if user_signed_in? %>
-    <%= link_to "Home", st_user_path(current_user) %>
-    <%=  link_to "Sign out", destroy_user_session_path, :method => 'delete' %>
-  <% else %>
-    <%= link_to "Home", root_path %>
-  <% end %>
 
 
 
