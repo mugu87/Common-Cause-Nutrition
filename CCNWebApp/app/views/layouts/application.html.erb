@@ -46,14 +46,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">CCNWebApp</a>
+          <a class="brand" href="#"><%= image_tag("benefitlogo_dark.png") %></a>
           <div class="container-fluid nav-collapse">
             <ul class="nav pull-right">
               <% if user_signed_in? %>
               <li><%= link_to "Home", st_user_path(current_user)  %></li>
               <li><%= link_to "Sign out", destroy_user_session_path, :method => 'delete'  %></li>
               <% else %>
-              <li><%= link_to "Home", st_user_path(current_user)  %></li>
+              <li><%= link_to "Home", new_user_session_path  %></li>
               <% end %>
             </ul>
           </div><!--/.nav-collapse -->

@@ -50,6 +50,12 @@ gem "twitter-bootstrap-rails"
 gem "google_visualr", ">= 2.1"
 
 
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'twitter'
+gem 'fb_graph'
+gem 'nifty-generators'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -61,3 +67,5 @@ gem "google_visualr", ">= 2.1"
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem "mocha", group: :test
