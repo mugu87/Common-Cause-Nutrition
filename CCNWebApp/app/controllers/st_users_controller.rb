@@ -48,18 +48,28 @@ class StUsersController < ApplicationController
 
 
     # Add Rows and Values
+    #    data_table2.add_rows([
+    #      ['3/22', 1160],
+    #      ['3/24', 1170],
+    #      ['3/26', 1135],
+    #      ['3/29', 1156],
+    #      ['4/1', 1158]
+    #    ])
+    team_progress = @user.get_org_total_cal_in_five_days
+    
     data_table2.add_rows([
-      ['3/22', 1160],
-      ['3/24', 1170],
-      ['3/26', 1135],
-      ['3/29', 1156],
-      ['4/1', 1158]
+      ['day 1', team_progress[:day_one]],
+      ['day 2', team_progress[:day_two]],
+      ['day 3', team_progress[:day_three]],
+      ['day 4', team_progress[:day_four]],
+      ['day 5', team_progress[:day_five]]
     ])
+
     option2 = { width: 440, height: 170, backgroundColor: '#3AA88A', 
                 vAxes:[{textStyle:{color:'white'}}],  hAxes:[{textStyle:{color:'white'}}],
-                legend:{position:'none'}, titleTextStyle:{ color: 'white',  fontSize: 16,},
-                series: [{color: '#0B534B'}]
-    }
+                  legend:{position:'none'}, titleTextStyle:{ color: 'white',  fontSize: 16,},
+                  series: [{color: '#0B534B'}]
+                }
     @chart2 = GoogleVisualr::Interactive::AreaChart.new(data_table2, option2)
   end
 
