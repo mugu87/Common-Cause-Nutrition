@@ -29,6 +29,13 @@ class StUser < User
   has_many :calories
 
   def get_calories_lost_todate
+      this_user_calories = Calory.where(:user_id => @st_user)
+      sum = 0
+      x = 0
+      while x < this_user_calories.size do
+	  sum = sum + this_user_calories[:outake]
+	  x = x + 1
+      end
   end
 
   #note

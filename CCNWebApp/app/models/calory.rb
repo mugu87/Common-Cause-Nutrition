@@ -10,5 +10,5 @@
 #
 
 class Calory < ActiveRecord::Base
-  belongs_to :user
+  belongs_to :st_user
 end
