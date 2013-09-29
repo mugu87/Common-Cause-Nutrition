@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.firstRow{
+	height: 500px;
+}
+.topRight div{
+	height: 250px;
+}
+.secondRow div{
+	height: 250px;
+}
+
 a,
 h1,h2,h3,h4,h5,h6,
 li,
@@ -12,10 +22,12 @@ p,{
 #stats{
 	color: #FFFFFF;
 	text-align:center;
+	height: 500px;
 }
 
 .centered{
 	text-align:center;
+	padding-top: 50px;
 }
 
 

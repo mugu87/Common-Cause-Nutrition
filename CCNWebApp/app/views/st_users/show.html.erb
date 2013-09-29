@@ -1,3 +1,4 @@
+
 <p id="notice"><%= notice %></p>
 <!-- <div class="container-fluid">
 
@@ -28,9 +29,9 @@
     <div class="row">
       <div class="col-md-12 darkblue">
         
-        <div class="row">
+        <div class="row firstRow">
           <div class="col-md-5 darkblue">
-            
+            <h3 class="centered">CALORIE BANK</h3>
             <p id='chart'></p>
             <%= render_chart(@chart, 'chart') %>
           </div>
@@ -58,26 +59,32 @@
             </ul>
             </div>
             <div>
-            <p class="inline-help">Donated</p>
+              <p class="inline-help">Donated</p>
               <p class="inline-help">To-Date</p>
             </div>
           </div>
+          <div class="topRight">
           <div class="col-md-3 orange4">
-            <h1 class="centered">SYRIA</h1>
+            <h3 class="centered">SYRIA</h3>
+            <p class="inline-help text-center">See</p>
+            <p class="inline-help text-center">Updates</p>
           </div>
           <div class="col-md-3 orange3">
-            <h1 class="centered">PAKISTAN</h1>
+            <h3 class="centered">PAKISTAN</h3>
+            <p class="inline-help text-center">See</p>
+            <p class="inline-help text-center">Updates</p>
+          </div>
           </div>
         </div>
       </div>
 
       <div class="col-md-12 ">
-        <div class="row">
-          <div class="col-md-5 blue3">
-            put chart here!!
+        <div class="row secondRow">
+          <div class="col-md-4 blue3">
 
           </div>
-          <div class="col-md-4 blue2">
+          <div class="col-md-5 blue2">
+            <h3>TEAM PROGRESS</h3>
             <p id='chart2'></p>
             <%= render_chart(@chart2, 'chart2') %>
             <br>
@@ -94,14 +101,11 @@
             <br>
           </div>
           <div class="col-md-3 orange2">
-            <h1 class="centered">BOULDER</h1>
+            <h3 class="centered">BOULDER</h3>
+            <p class="inline-help text-center">See</p>
+            <p class="inline-help text-center">Updates</p>
           </div>
-          <div class="col-md-3 orange1">
-            <h1 class="centered">PAKISTAN</h1>
-            <p>
-  I have lost this much <%= @st_user.get_calories_lost_todate %>
-</p>
-          </div>
+          
         </div>
       </div>
     </div>
