@@ -6,7 +6,7 @@
         
         <div class="row firstRow">
           <div class="col-md-5 orange4">
-            <h1 class="centered"><%= @organization.name %></h1>
+            <h1 class="centered"><%= @organization.location %></h1>
             <div style="margin-left:auto;margin-right:auto;width:370px;">
             <p style="font-size:17px;line-height:150%;"><%= @organization.discription %></p>
 	        </div>
@@ -23,10 +23,10 @@
           </div>
           <div class="topRight">
           <div class="col-md-3 blue2">
-            <h3 class="centered">PROFILE</h3>
+            <h3 class="centered" style="margin-top:50px;">PROFILE</h3>
           </div>
           <div class="col-md-3 blue3">
-            <div class="update">
+            <div class="update" style="margin-top:50px;">
             <p class="updateText">Katie just donated her calories to SYRIA</p>
             <p class="updateText">Jim just donated his calories to New Orleans</p>
             </div>
@@ -37,7 +37,7 @@
 
       <div class="col-md-12 ">
         <div class="row secondRow">
-          <div class="col-md-4 orange2">
+          <div class="col-md-3 orange2">
           	<h3 class="secHeader">YOUR <br>CALORIES</h3>
           </div>
           <div class="col-md-5 orange3">
@@ -45,10 +45,11 @@
             <p id='chart'></p>
             <%= render_chart(@chart, 'chart') %>
           </div>
-          <div class="col-md-3 orange4">
-            <h3 class="centered">THE RED CROSS</h3>
-            <p class="inline-help text-center">See</p>
-            <p class="inline-help text-center">Updates</p>
+          <div class="col-md-4 orange4">
+            <h3 class="secHeader"><%= @organization.name %></h3>
+            <div style="margin-left:auto;margin-right:auto;width:370px;">
+            <p style="font-size:13px;line-height:150%;"><%= @organization.discription %></p>
+	        </div>
           </div>
           
         </div>
@@ -58,8 +59,7 @@
 		<footer class="footer">
           <p>&copy; BeneFit 2013</p>
           <%= link_to 'New Donations', new_donation_path(@st_user), :class => 'pull-right foot' %> <p class="pull-right foot"> | </p>
-          <%= link_to 'Edit', edit_organization_path(@organization), :class => 'pull-right foot' %> <p class="pull-right foot"> | </p>
-          <%= link_to 'Back', st_users_path, :class => 'pull-right' %>
+          <%= link_to 'Edit', edit_organization_path(@organization), :class => 'pull-right foot' %>
       </footer>
 
 <p>
