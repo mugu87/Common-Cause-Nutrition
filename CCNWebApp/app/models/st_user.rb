@@ -90,9 +90,19 @@ class StUser < User
     Organization.all
   end
 
+  def get_money_donated
+
+  end
+
   # return an int
-  def get_balance_to_spend
+  def get_money_to_spend
   end
 
   #note: height, weight, and list of organization can be access in the views
 end
+
+#todo:
+#1.  money donated
+#2. money to spend   ---done. see calories_to_spend
+# 
+#
