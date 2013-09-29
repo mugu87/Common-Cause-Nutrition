@@ -52,10 +52,10 @@
             <h4 style="font-family:'nexa_lightregular',Arial, sans-serif;">Calories</h4>
            <!--  <span id="barGraph"> -->
             <ul class="inline barGraph">
-              <li class="col-md-4 blue1">
+              <li class="col-md-5 blue1">
                 <p>5500</p>
               </li>
-              <li class="col-md-2 darkblue">
+              <li class="col-md-3 darkblue">
                 <p><%= @st_user.get_calories_lost_todate %></p>
               </li>
             </ul>
@@ -68,11 +68,15 @@
           <div class="topRight">
           <div class="col-md-3 orange4">
             <h3 class="centered">SYRIA</h3>
-            <p class="inline-help text-center">See <br>Updates</p>
+            <div class="text-center">
+            <a href=""><font color="#FFFFFF">See<br> Updates</font></a>
+            </div>
           </div>
           <div class="col-md-3 orange3">
             <h3 class="centered">PAKISTAN</h3>
-            <p class="inline-help text-center">See<br> Updates</p>
+            <div class="text-center">
+            <a href=""><font color="#FFFFFF">See<br> Updates</font></a>
+            </div>
           </div>
           </div>
         </div>
@@ -95,53 +99,24 @@
           </div>
           <div class="col-md-3 orange2">
             <h3 class="centered">BOULDER</h3>
-            <p class="inline-help text-center">See<br>Updates</p>
+            <div class="text-center">
+            <a href=""><font color="#FFFFFF">See<br> Updates</font></a>
+            </div>
           </div>
           
         </div>
       </div>
       <footer class="footer">
-              <p>&copy; BeneFit 2013</p>
-            
-      <%= link_to 'New Donations', new_donation_path(@st_user) %> |
-      <%= link_to 'Edit', edit_st_user_path(@st_user.id) %> |
-      <%= link_to 'Back', st_users_path %>
+          <p>&copy; BeneFit 2013</p>
+          <%= link_to 'New Donations', new_donation_path(@st_user), :class => 'pull-right' %> |
+          <%= link_to 'Edit', edit_st_user_path(@st_user.id), :class => 'pull-right' %> |
+          <%= link_to 'Back', st_users_path, :class => 'pull-right' %>
       </footer>
     </div>
 
 <!--   </div>
 </div> -->
 
-
-<p>
-  <strong>Name:</strong>
-  <%= @st_user.name %>
-</p>
-
-<p>
-  <strong>Height:</strong>
-  <%= @st_user.height %>
-</p>
-
-<p>
-  <strong>Weight:</strong>
-  <%= @st_user.weight %>
-</p>
-
-<p>
-  <strong>Sex:</strong>
-  <%= @st_user.sex %>
-</p>
-
-<p>
-  <strong>Total calorie in:</strong>
-  <%= @st_user.total_calorie_in %>
-</p>
-
-<p>
-  <strong>Total calorie out:</strong>
-  <%= @st_user.total_calorie_out %>
-</p>
 
 
 

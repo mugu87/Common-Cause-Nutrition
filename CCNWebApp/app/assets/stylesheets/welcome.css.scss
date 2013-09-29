@@ -14,8 +14,10 @@
 
 .navbar-fluid-top,
 .navbar-inner{
-	background: #696977;
+	background: #4B5150;
 	border: 0;
+	margin-left: 11%;
+	margin-right: 11%;
 }
 
 .navbar a:link{
@@ -25,3 +27,9 @@
 .nav li{
 	color: #FFF;
 }
+a:link{
+	color: #FFFFFF;
+	text-decoration: none;
+	outline: 0;
+}
+a:hover,a:focus{color:#005580;text-decoration:underline;}

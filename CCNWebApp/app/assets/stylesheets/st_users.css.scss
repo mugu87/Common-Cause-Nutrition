@@ -18,6 +18,11 @@ li,
 p,{
 	color: #FFFFFF;
 }
+a:link{
+	text-decoration: none;
+	font-family: 'nexa_lightregular', Arial, sans-serif;
+}
+a:hover,a:focus{color:#005580;text-decoration:none;}
 .secHeader{
 	margin-left: 50px;
 }
@@ -54,9 +59,11 @@ h1,h2,h3,h4,h5,h6{
 .barGraph{
 	margin-right: 0 auto;
 }
-.mainDiv{
+#mainDiv{
 	padding: 0;
 	margin: 0;
+	background: #4B5150;
+	border: 0;
 }
 
 
