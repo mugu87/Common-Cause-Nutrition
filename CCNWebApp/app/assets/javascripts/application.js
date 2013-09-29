@@ -15,4 +15,4 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
-@import url("bootstrap.min.js");
+
