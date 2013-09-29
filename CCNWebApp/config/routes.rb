@@ -1,6 +1,7 @@
 CCNWebApp::Application.routes.draw do
 
 
+  resources :authentications
   resources :calories
 
   resources :st_users
@@ -9,7 +10,9 @@ CCNWebApp::Application.routes.draw do
 
   resources :donations
 
-  devise_for :users
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
+    controllers: {omniauth_callbacks: "authentications", registrations: "membership"}
+
   get "welcome/index"
   root :to => "welcome#index"
 
@@ -53,7 +56,7 @@ CCNWebApp::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'

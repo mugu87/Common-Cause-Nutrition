@@ -29,6 +29,7 @@ GEM
       rake
     arel (4.0.0)
     atomic (1.1.14)
+    attr_required (0.0.5)
     bcrypt-ruby (3.1.2)
     builder (3.1.4)
     coffee-rails (4.0.0)
@@ -47,8 +48,18 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    faraday (0.8.8)
+      multipart-post (~> 1.2.0)
+    fb_graph (2.7.8)
+      httpclient (>= 2.2.0.2)
+      multi_json (>= 1.3)
+      rack-oauth2 (>= 0.14.4)
+      tzinfo
     google_visualr (2.1.9)
+    hashie (2.0.5)
     hike (1.2.3)
+    httpauth (0.2.0)
+    httpclient (2.3.4.1)
     i18n (0.6.5)
     jbuilder (1.5.1)
       activesupport (>= 3.0.0)
@@ -60,6 +71,8 @@ GEM
       railties (>= 3.1.0)
       turbolinks
     json (1.8.0)
+    jwt (0.1.8)
+      multi_json (>= 1.5)
     less (2.4.0)
       commonjs (~> 0.2.7)
     less-rails (2.4.2)
@@ -69,12 +82,44 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     mime-types (1.25)
     minitest (4.7.5)
+    mocha (0.14.0)
+      metaclass (~> 0.0.1)
     multi_json (1.8.0)
+    multipart-post (1.2.0)
+    nifty-generators (0.4.6)
+    oauth (0.4.7)
+    oauth2 (0.8.1)
+      faraday (~> 0.8)
+      httpauth (~> 0.1)
+      jwt (~> 0.1.4)
+      multi_json (~> 1.0)
+      rack (~> 1.2)
+    omniauth (1.1.4)
+      hashie (>= 1.2, < 3)
+      rack
+    omniauth-facebook (1.4.1)
+      omniauth-oauth2 (~> 1.1.0)
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-oauth2 (1.1.1)
+      oauth2 (~> 0.8.0)
+      omniauth (~> 1.0)
+    omniauth-twitter (1.0.0)
+      multi_json (~> 1.3)
+      omniauth-oauth (~> 1.0)
     orm_adapter (0.4.0)
     polyglot (0.3.3)
     rack (1.5.2)
+    rack-oauth2 (1.0.5)
+      activesupport (>= 2.3)
+      attr_required (>= 0.0.5)
+      httpclient (>= 2.2.0.2)
+      multi_json (>= 1.3.6)
+      rack (>= 1.1)
     rack-test (0.6.2)
       rack (>= 1.0)
     rails (4.0.0)
@@ -102,6 +147,7 @@ GEM
     sdoc (0.3.20)
       json (>= 1.1.3)
       rdoc (~> 3.10)
+    simple_oauth (0.2.0)
     sprockets (2.10.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -124,6 +170,10 @@ GEM
       polyglot (>= 0.3.1)
     turbolinks (1.3.0)
       coffee-rails
+    twitter (4.8.1)
+      faraday (~> 0.8, < 0.10)
+      multi_json (~> 1.0)
+      simple_oauth (~> 0.2)
     twitter-bootstrap-rails (2.2.8)
       actionpack (>= 3.1)
       execjs
@@ -143,16 +193,22 @@ DEPENDENCIES
   annotate (~> 2.5.0)
   coffee-rails (~> 4.0.0)
   devise
+  fb_graph
   google_visualr (>= 2.1)
   jbuilder (~> 1.2)
   jquery-rails
   jquery-turbolinks
   less-rails
+  mocha
+  nifty-generators
+  omniauth-facebook
+  omniauth-twitter
   rails (= 4.0.0)
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3
   therubyracer
   turbolinks
+  twitter
   twitter-bootstrap-rails
   uglifier (>= 1.3.0)
