@@ -44,7 +44,7 @@ class StUsersController < ApplicationController
         ['3/29', 1156],
         ['4/1', 1158]
     ])
-    option2 = { width: 400, height: 240, title: 'Company Performance', backgroundColor: '#0B534B', 
+    option2 = { title: 'TEAM PROGRESS', backgroundColor: '#3AA88A', 
                 vAxes:[{textStyle:{color:'black'}}],  hAxes:[{textStyle:{color:'black'}}],
                 }
     @chart2 = GoogleVisualr::Interactive::AreaChart.new(data_table2, option2)
