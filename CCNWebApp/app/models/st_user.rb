@@ -28,6 +28,8 @@ class StUser < User
   belongs_to :organization
   has_many :calories
 
+  $calories_per_dollar = 2000.00
+
   #Note: do not use this method. It is a private, helper method
   def calculate_total_calories(cal)
     sum = 0
@@ -45,6 +47,11 @@ class StUser < User
     this_user_calories = Calory.where(:user_id => id)
     sum = calculate_total_calories(this_user_calories)
     sum
+  end
+
+  def get_money_for_calories_lost
+    result = self.get_calories_lost_todate / $calories_per_dollar
+    result
   end
 
   #note
