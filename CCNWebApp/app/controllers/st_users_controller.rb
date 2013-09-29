@@ -29,7 +29,7 @@ class StUsersController < ApplicationController
 
     ])
     option = { width: 450, height: 340, :backgroundColor => '#0B534B', pieHole: 0.7,
-               legend:{position:'none'}, titleTextStyle:{ color: 'white',  fontSize: 16,},
+               legend:{position:'none'}, titleTextStyle:{ color: 'white',  fontSize: 40,},
                slices: [{color:'#45CCA7'}, {color: '#0B534B'}, {color:'#45CCA7'}, {color: '#45CCA7'},{color: '#0B534B'},{color: '#45CCA7'}],
                pieSliceText: 'none',
                tooltip:{trigger: 'none'}, pieSliceBorderColor:'#45CCA7'
