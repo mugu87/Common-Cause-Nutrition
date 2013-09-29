@@ -27,4 +27,21 @@ class StUser < User
   has_many :donations
   belongs_to :organization
   has_many :calories
+
+  def get_calories_lost_todate
+  end
+
+  #note
+  def get_calories_lost_today
+  end
+
+  #note: can be done in the views
+  def get_organizations_list
+  end
+
+  # return an int
+  def get_balance_to_spend
+  end
+
+  #note: height, weight, and list of organization can be access in the views
 end

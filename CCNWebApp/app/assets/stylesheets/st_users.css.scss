@@ -1,3 +1,25 @@
 // Place all the styles related to the st_users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.blue{
+	background: #1ABC9C;
+}
+
+.orange{
+	background: #E67E22;
+}
+
+a{
+	color:#0088cc;
+	text-decoration:none;
+}
+
+a:hover,a:focus{
+	color:#005580;
+	text-decoration:underline;
+}
+
+.span4{
+	width: 250px;
+}
