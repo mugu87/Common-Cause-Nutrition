@@ -1,5 +1,5 @@
 
-<p id="notice"><%= notice %></p>
+
 <!-- <div class="container-fluid">
 
     <div class="row-fluid">
@@ -26,7 +26,8 @@
 <!-- <div class="row userProfile">
   <div class="span12"> -->
     
-    <div class="row">
+    <div class="row" id="mainDiv">
+      <p id="notice"><%= notice %></p>
       <div class="col-md-12 darkblue">
         
         <div class="row firstRow">
@@ -36,7 +37,7 @@
             <%= render_chart(@chart, 'chart') %>
           </div>
           <div class="col-md-4 blue3" id="stats">
-            <h3>STATS</h3>
+            <h3 class="centered">STATS</h3>
 
             <h1><%= @st_user.height %>in</h1>
             <ul class="inline">
@@ -48,31 +49,29 @@
               </li>
             </ul>
             <h4>Calories</h4>
-            <div>
-            <ul class="inline centered">
-              <li class="col-md-2 blue1">
+           <!--  <span id="barGraph"> -->
+            <ul class="inline barGraph">
+              <li class="col-md-4 blue1">
                 <p>5500</p>
               </li>
               <li class="col-md-2 darkblue">
                 <p><%= @st_user.get_calories_lost_todate %></p>
               </li>
             </ul>
-            </div>
-            <div>
-              <p class="inline-help">Donated</p>
-              <p class="inline-help">To-Date</p>
-            </div>
+            <!-- </span> -->
+            <!-- <div>
+              <p>Donated</p>
+              <p>To-Date</p>
+            </div> -->
           </div>
           <div class="topRight">
           <div class="col-md-3 orange4">
             <h3 class="centered">SYRIA</h3>
-            <p class="inline-help text-center">See</p>
-            <p class="inline-help text-center">Updates</p>
+            <p class="inline-help text-center">See <br>Updates</p>
           </div>
           <div class="col-md-3 orange3">
             <h3 class="centered">PAKISTAN</h3>
-            <p class="inline-help text-center">See</p>
-            <p class="inline-help text-center">Updates</p>
+            <p class="inline-help text-center">See<br> Updates</p>
           </div>
           </div>
         </div>
@@ -81,29 +80,19 @@
       <div class="col-md-12 ">
         <div class="row secondRow">
           <div class="col-md-4 blue3">
-
+            <h3>UPDATES</h3>
+            <p class="updates">Katie just donated her calories to SYRIA</p>
+            <p class="updates">Jim just donated his calories to New Orleans</p>
           </div>
           <div class="col-md-5 blue2">
             <h3>TEAM PROGRESS</h3>
             <p id='chart2'></p>
             <%= render_chart(@chart2, 'chart2') %>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <h1>jkfld;ajklfdjsl;</h1>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+            
           </div>
           <div class="col-md-3 orange2">
             <h3 class="centered">BOULDER</h3>
-            <p class="inline-help text-center">See</p>
-            <p class="inline-help text-center">Updates</p>
+            <p class="inline-help text-center">See<br>Updates</p>
           </div>
           
         </div>

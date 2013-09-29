@@ -18,6 +18,13 @@ li,
 p,{
 	color: #FFFFFF;
 }
+.updates{
+	font-size: 15px;
+	padding: 10px;
+}
+p{
+	font-family: 'nexa_lightregular', Arial, sans-serif;
+}
 
 #stats{
 	color: #FFFFFF;
@@ -28,6 +35,15 @@ p,{
 .centered{
 	text-align:center;
 	padding-top: 50px;
+	margin-right: 0 auto;
+	margin-left: 0 auto;
+}
+.barGraph{
+	margin-right: 0 auto;
+}
+.mainDiv{
+	padding: 0;
+	margin: 0;
 }
 
 
