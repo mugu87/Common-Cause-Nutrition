@@ -12,15 +12,15 @@
 	        </div>
           </div>
           <div class="col-md-4 orange1" id="stats">
-            <h3 class="centered">STATS ----</h3>
+            <h3 class="centered">STATS - - - - - - - - - - -</h3>
             
            
             <ul class="inline">
               <li>
-                <h1 style="font-family:'nexa_lightregular',Arial,sans-serif;font-size:80px;"><%= @organization.stats %><span style="font-size:20px;vertical-align:super;">M affected</span></h1>
+                <h1 style="font-family:'nexa_lightregular',Arial,sans-serif;font-size:80px;padding-top:15px;"><%= @organization.stats %><span style="font-size:17px;vertical-align:super;">M affected</span></h1>
               </li>
               <li>
-                <h2 style="font-family:'nexa_lightregular',Arial,sans-serif;font-size:60px;">30%<span style="font-size:15px;vertical-align:super;">Women/Children</span></h2> 
+                <h2 style="font-family:'nexa_lightregular',Arial,sans-serif;font-size:60px;padding-top:15px;">30%<span style="font-size:15px;vertical-align:super;">Women/Children</span></h2> 
               </li>
             </ul>
           </div>
@@ -42,9 +42,9 @@
         <div class="row secondRow">
           <div class="col-md-3 orange2">
           	<h3 class="secHeader">YOUR <br>CALORIES</h3>
-          	<span class="col-md-8 orange4">
-              <p><%= @user.get_calories_lost_todate %><p>
-              </span>
+          	<span class="col-md-11 orange4" style="margin-right:auto;margin-left:auto;margin-top:17px;">
+              <p class="text-center" style="margin-top:3px;"><%= @user.get_calories_lost_todate %><p>
+	          </span>
           </div>
           <div class="col-md-5 orange3">
             <h3 class="secHeader">GIVE</h3>
@@ -54,7 +54,7 @@
           <div class="col-md-4 orange4">
             <h3 class="secHeader"><%= @organization.name %></h3>
             <div style="margin-left:auto;margin-right:auto;width:370px;">
-            <p style="font-size:13px;line-height:150%;"><%= @organization.org_profile %></p>
+            <p style="font-size:13px;line-height:150%;width:300px;margin:auto;"><%= @organization.org_profile %></p>
 	        </div>
           </div>
           
