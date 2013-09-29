@@ -28,7 +28,7 @@ class StUsersController < ApplicationController
       ['four',85]
 
     ])
-    option = { width: 500, height: 340, :backgroundColor => '#0B534B', pieHole: 0.7,
+    option = { width: 450, height: 340, :backgroundColor => '#0B534B', pieHole: 0.7,
                legend:{position:'none'}, titleTextStyle:{ color: 'white',  fontSize: 16,},
                slices: [{color:'#45CCA7'}, {color: '#0B534B'}, {color:'#45CCA7'}, {color: '#45CCA7'},{color: '#0B534B'},{color: '#45CCA7'}],
                pieSliceText: 'none',
@@ -55,7 +55,7 @@ class StUsersController < ApplicationController
       ['3/29', 1156],
       ['4/1', 1158]
     ])
-    option2 = { backgroundColor: '#3AA88A', 
+    option2 = { width: 440, height: 170, backgroundColor: '#3AA88A', 
                 vAxes:[{textStyle:{color:'white'}}],  hAxes:[{textStyle:{color:'white'}}],
                 legend:{position:'none'}, titleTextStyle:{ color: 'white',  fontSize: 16,},
                 series: [{color: '#0B534B'}]
