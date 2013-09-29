@@ -14,19 +14,18 @@ class StUsersController < ApplicationController
     @mydonations = Donation.where(:st_user_id => current_user)
     data_table = GoogleVisualr::DataTable.new
     # Add Column Headers
-    data_table.new_column('string', 'Year' )
-    data_table.new_column('number', 'Sales')
-    data_table.new_column('number', 'Expenses')
+    data_table.new_column('string', 'Task' )
+    data_table.new_column('number', 'Hours per Day')
 
     # Add Rows and Values
     data_table.add_rows([
-        ['2004', 1000, 400],
-        ['2005', 1170, 460],
-        ['2006', 660, 1120],
-        ['2007', 1030, 540]
+        ['one', 1000],
+        ['two', 1170],
+        ['three', 660],
+        ['four', 540],
     ])
-    option = { width: 400, height: 240, title: 'Company Performance' }
-    @chart = GoogleVisualr::Interactive::BarChart.new(data_table, option)
+    option = { width: 400, height: 240, title: 'Company Performance', :backgroundColor => '#20806A', pieHole: 0.4}
+    @chart = GoogleVisualr::Interactive::PieChart.new(data_table, option)
   end
 
   # GET /st_users/new
