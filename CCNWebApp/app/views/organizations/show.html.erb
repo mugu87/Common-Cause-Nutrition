@@ -1,14 +1,18 @@
-<p id="notice"><%= notice %></p>
 
-<div class="row">
+
+<div class="row" id="mainDiv">
+	<p id="notice"><%= notice %></p>
       <div class="col-md-12 orange4">
         
         <div class="row firstRow">
           <div class="col-md-5 orange4">
-            <h1 class="centered">SYRIA</h1>
+            <h1 class="centered"><%= @organization.name %></h1>
+            <div style="margin-left:auto;margin-right:auto;width:370px;">
+            <p style="font-size:17px;line-height:150%;"><%= @organization.discription %></p>
+	        </div>
           </div>
           <div class="col-md-4 orange1" id="stats">
-            <h3>STATS ----</h3>
+            <h3 class="centered">STATS ----</h3>
             <ul class="inline">
               <li>
               </li>
@@ -16,25 +20,16 @@
                 <!-- <p>lbs</p> -->
               </li>
             </ul>
-            <h4>Calories</h4>
-            <div>
-            
-            </div>
-            <div>
-              <p class="inline-help">Donated</p>
-              <p class="inline-help">To-Date</p>
-            </div>
           </div>
           <div class="topRight">
           <div class="col-md-3 blue2">
-            <h3 class="centered">SYRIA</h3>
-            <p class="inline-help text-center">See</p>
-            <p class="inline-help text-center">Updates</p>
+            <h3 class="centered">PROFILE</h3>
           </div>
           <div class="col-md-3 blue3">
-            <h3 class="centered">PAKISTAN</h3>
-            <p class="inline-help text-center">See</p>
-            <p class="inline-help text-center">Updates</p>
+            <div class="update">
+            <p class="updateText">Katie just donated her calories to SYRIA</p>
+            <p class="updateText">Jim just donated his calories to New Orleans</p>
+            </div>
           </div>
           </div>
         </div>
@@ -43,13 +38,15 @@
       <div class="col-md-12 ">
         <div class="row secondRow">
           <div class="col-md-4 orange2">
-
+          	<h3 class="secHeader">YOUR <br>CALORIES</h3>
           </div>
           <div class="col-md-5 orange3">
-            <h3>GIVE</h3>
+            <h3 class="secHeader">GIVE</h3>
+            <p id='chart'></p>
+            <%= render_chart(@chart, 'chart') %>
           </div>
           <div class="col-md-3 orange4">
-            <h3 class="centered">BOULDER</h3>
+            <h3 class="centered">THE RED CROSS</h3>
             <p class="inline-help text-center">See</p>
             <p class="inline-help text-center">Updates</p>
           </div>
@@ -57,6 +54,13 @@
         </div>
       </div>
     </div>
+
+		<footer class="footer">
+          <p>&copy; BeneFit 2013</p>
+          <%= link_to 'New Donations', new_donation_path(@st_user), :class => 'pull-right foot' %> <p class="pull-right foot"> | </p>
+          <%= link_to 'Edit', edit_organization_path(@organization), :class => 'pull-right foot' %> <p class="pull-right foot"> | </p>
+          <%= link_to 'Back', st_users_path, :class => 'pull-right' %>
+      </footer>
 
 <p>
   <strong>Name:</strong>
@@ -72,6 +76,3 @@
   <strong>Discription:</strong>
   <%= @organization.discription %>
 </p>
-
-<%= link_to 'Edit', edit_organization_path(@organization) %> |
-<%= link_to 'Back', organizations_path %>

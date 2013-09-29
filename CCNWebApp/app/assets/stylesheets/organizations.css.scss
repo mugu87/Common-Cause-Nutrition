@@ -1,3 +1,127 @@
 // Place all the styles related to the organizations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.firstRow{
+	height: 500px;
+}
+.topRight div{
+	height: 250px;
+}
+.secondRow div{
+	height: 250px;
+}
+
+a,
+h1,h2,h3,h4,h5,h6,
+li,
+p,{
+	color: #FFFFFF;
+}
+a:link{
+	text-decoration: none;
+	font-family: 'nexa_lightregular', Arial, sans-serif;
+}
+a:hover,a:focus{color:#005580;text-decoration:none;}
+.secHeader{
+	margin-left: 50px;
+}
+#chart2{
+	margin-left: 30px;
+}
+.update{
+	width: 200px;
+	margin-right: auto;
+	margin-left: auto
+}
+.updateText{
+	font-size: 15px;
+	padding: 10px;
+}
+p{
+	font-family: 'nexa_lightregular', Arial, sans-serif;
+}
+h1,h2,h3,h4,h5,h6{ 
+	font-family: 'Lato', Arial, serif;
+}
+#stats{
+	color: #FFFFFF;
+	text-align:center;
+	height: 500px;
+	
+}
+
+.centered{
+	text-align:center;
+	padding-top: 50px;
+	margin-right: 0 auto;
+	margin-left: 0 auto;
+}
+.barGraph{
+	margin-right: 0 auto;
+}
+#mainDiv{
+	padding: 0;
+	margin: 0;
+	background: #4B5150;
+	border: 0;
+}
+
+
+.blue1{
+	background: #45CCA7;
+}
+
+.blue2{
+	background: #3AA88A;
+}
+
+.blue3{
+	background: #20806A;
+}
+.darkblue{
+	background: #0B534B;
+}
+
+.orange1{
+	background: #F7982A;
+}
+
+.orange2{
+	background: #FB7F24;
+}
+
+.orange3{
+	background: #FF7300;
+}
+
+.orange4{
+	background: #F85000;
+}
+
+a{
+	color:#0088cc;
+	text-decoration:none;
+}
+
+a:hover,a:focus{
+	color:#005580;
+	text-decoration:underline;
+}
+
+.userProfile{
+	margin-left: auto;
+	margin-right: auto;
+}
+.footer{
+	background: #CCCCCC;
+	color: white;
+}
+.footer a:link{
+	text-decoration: none;
+	color: white;
+}
+.foot{
+	background: #CCCCCC;
+}

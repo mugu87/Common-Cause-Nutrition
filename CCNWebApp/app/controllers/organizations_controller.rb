@@ -10,6 +10,30 @@ class OrganizationsController < ApplicationController
   # GET /organizations/1
   # GET /organizations/1.json
   def show
+    @user =@st_user
+    @mydonations = Donation.where(:st_user_id => current_user)
+    data_table = GoogleVisualr::DataTable.new
+    # Add Column Headers
+    data_table.new_column('string', 'Task' )
+    data_table.new_column('number', 'Hours per Day')
+
+    # Add Rows and Values
+    data_table.add_rows([
+      ['one', 85],
+      ['two', 10],
+      ['three', 85],
+      ['bah',85],
+      ['four',10],
+      ['four',85]
+
+    ])
+    option = { :backgroundColor => '#FF7300', pieHole: 0.5,
+               legend:{position:'none'}, titleTextStyle:{ color: 'white',  fontSize: 16,},
+               slices: [{color:'#F85000'}, {color: '#F7982A'}, {color:'#F85000'}, {color: '#F7982A'},{color: '#F85000'},{color: '#45CCA7'}],
+               pieSliceText: 'none',
+               tooltip:{trigger: 'none'}, pieSliceBorderColor:'#45CCA7'
+    }
+    @chart = GoogleVisualr::Interactive::PieChart.new(data_table, option)
   end
 
   # GET /organizations/new
