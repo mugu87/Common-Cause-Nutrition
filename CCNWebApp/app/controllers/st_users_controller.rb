@@ -26,6 +26,30 @@ class StUsersController < ApplicationController
     ])
     option = { width: 400, height: 240, title: 'Company Performance', :backgroundColor => '#0B534B', pieHole: 0.4}
     @chart = GoogleVisualr::Interactive::PieChart.new(data_table, option)
+
+
+    # chart two
+    data_table2 = GoogleVisualr::DataTable.new
+    # Add Column Headers
+    data_table2.new_column('string', 'Date' )
+    data_table2.new_column('number', 'Team Progress')
+  #  data_table2.new_column({type:'string', role:'annotation'})
+#    data_table2.new_column({type:'string', role:'annotationText'})
+
+
+
+    # Add Rows and Values
+    data_table2.add_rows([
+        ['3/22', 1160],
+        ['3/24', 1170],
+        ['3/26', 1135],
+        ['3/29', 1156],
+        ['4/1', 1158]
+    ])
+    option2 = { width: 400, height: 240, title: 'Company Performance', backgroundColor: '#0B534B', 
+                vAxes:[{textStyle:{color:'black'}}],  hAxes:[{textStyle:{color:'black'}}],
+                }
+    @chart2 = GoogleVisualr::Interactive::AreaChart.new(data_table2, option2)
   end
 
   # GET /st_users/new

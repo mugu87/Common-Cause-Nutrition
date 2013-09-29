@@ -7,7 +7,7 @@
           <div class="span6 blue">
             <p>hellow</p>
             <p id='chart'></p>
-            <%= render_chart(@chart, 'chart') %>
+            <% # render_chart(@chart, 'chart') %>
           </div>
           <div class="span4 orange1">
             <p>nooo</p>
@@ -41,7 +41,8 @@
       <div class="span12">Fluid 6dsdsa
         <div class="row-fluid">
           <div class="span5 darkblue">
-            put chart here!!
+            <p id='chart2'></p>
+            <%= render_chart(@chart2, 'chart2') %>
           </div>
           <div class="span4 blue3">Fluid 4</div>
           <div class="span3 orange2">Fluid </div>
