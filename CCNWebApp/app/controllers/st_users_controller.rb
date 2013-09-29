@@ -22,7 +22,9 @@ class StUsersController < ApplicationController
         ['one', 1170],
         ['two', 1170]
     ])
-    option = { width: 500, height: 340, title: 'CALORIE BANK', :backgroundColor => '#0B534B', pieHole: 0.6}
+    option = { width: 500, height: 340, title: 'CALORIE BANK', :backgroundColor => '#0B534B', pieHole: 0.6,
+              legend:{position:'none'}, titleTextStyle:{ color: 'white',  fontSize: 16,}
+    }
     @chart = GoogleVisualr::Interactive::PieChart.new(data_table, option)
 
 
