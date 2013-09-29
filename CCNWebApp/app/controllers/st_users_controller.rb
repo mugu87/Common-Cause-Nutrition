@@ -10,6 +10,7 @@ class StUsersController < ApplicationController
   # GET /st_users/1
   # GET /st_users/1.json
   def show
+    @user =@st_user
     @mydonations = Donation.where(:st_user_id => current_user)
     data_table = GoogleVisualr::DataTable.new
     # Add Column Headers
