@@ -51,10 +51,10 @@
           <div class="container-fluid nav-collapse">
             <ul class="nav pull-right">
               <% if user_signed_in? %>
-              <li><%= link_to "Home", st_user_path(current_user), :class => "nav_link"  %></li>
-              <li><%= link_to "Sign out", destroy_user_session_path, :method => 'delete', :class => "nav_link"  %></li>
+              <li><%= link_to "Home", st_user_path(current_user)  %></li>
+              <li><%= link_to "Sign out", destroy_user_session_path, :method => 'delete'  %></li>
               <% else %>
-              <li><%= link_to "Home", st_user_path(current_user), :class => "nav_link"  %></li>
+              <li><%= link_to "Home", st_user_path(current_user)  %></li>
               <% end %>
             </ul>
           </div><!--/.nav-collapse -->
@@ -67,15 +67,11 @@
           <%= yield %>
         </div>
 
-      <footer>
-        <p>&copy; Company 2013</p>
-      </footer>
-
-    <!-- </div> --> <!-- /container -->
-
-
-
-
 
   </body>
 </html>
+     <!--  <footer>
+        <p>&copy; Company 2013</p>
+      </footer> -->
+
+    <!-- </div> --> <!-- /container -->

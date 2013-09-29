@@ -24,7 +24,7 @@ class StUsersController < ApplicationController
         ['three', 660],
         ['four', 540],
     ])
-    option = { width: 400, height: 240, title: 'Company Performance', :backgroundColor => '#20806A', pieHole: 0.4}
+    option = { width: 400, height: 240, title: 'Company Performance', :backgroundColor => '#0B534B', pieHole: 0.4}
     @chart = GoogleVisualr::Interactive::PieChart.new(data_table, option)
   end
 

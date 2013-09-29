@@ -2,8 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.blue{
-	background: #1ABC9C;
+.blue1{
+	background: #0B534B;
+}
+
+.blue2{
+	background: #3AA88A;
+}
+
+.blue3{
+	background: #20806A;
+}
+.darkblue{
+	background: #0B534B;
 }
 
 .orange1{
@@ -32,6 +43,7 @@ a:hover,a:focus{
 	text-decoration:underline;
 }
 
-.span4{
-	width: 250px;
+.userProfile{
+	margin-left: auto;
+	margin-right: auto;
 }
