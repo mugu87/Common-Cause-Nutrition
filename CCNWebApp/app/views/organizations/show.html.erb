@@ -14,13 +14,13 @@
           <div class="col-md-4 orange1" id="stats">
             <h3 class="centered">STATS ----</h3>
             
-            <h1 style="font-family:'nexa_lightregular',Arial,sans-serif;font-size:80px;"><%= @organization.stat %><span style="font-size:20px;vertical-align:super;">in</span></h1>
+           
             <ul class="inline">
               <li>
-                <h1 style="font-family:'nexa_lightregular',Arial,sans-serif;font-size:80px;"><%= @oraganization.stats %><span style="font-size:20px;vertical-align:super;">lbs</span></h1>
+                <h1 style="font-family:'nexa_lightregular',Arial,sans-serif;font-size:80px;"><%= @organization.stats %><span style="font-size:20px;vertical-align:super;">M affected</span></h1>
               </li>
               <li>
-                <!-- <p>lbs</p> -->
+                <h2 style="font-family:'nexa_lightregular',Arial,sans-serif;font-size:60px;">30%<span style="font-size:15px;vertical-align:super;">Women/Children</span></h2> 
               </li>
             </ul>
           </div>
@@ -42,9 +42,9 @@
         <div class="row secondRow">
           <div class="col-md-3 orange2">
           	<h3 class="secHeader">YOUR <br>CALORIES</h3>
-          	<div class="col-md-8 blue1">
+          	<span class="col-md-8 orange4">
               <p><%= @user.get_calories_lost_todate %><p>
-              </div>
+              </span>
           </div>
           <div class="col-md-5 orange3">
             <h3 class="secHeader">GIVE</h3>
@@ -54,7 +54,7 @@
           <div class="col-md-4 orange4">
             <h3 class="secHeader"><%= @organization.name %></h3>
             <div style="margin-left:auto;margin-right:auto;width:370px;">
-            <p style="font-size:13px;line-height:150%;"><%= @organization.discription %></p>
+            <p style="font-size:13px;line-height:150%;"><%= @organization.org_profile %></p>
 	        </div>
           </div>
           
@@ -64,8 +64,8 @@
 
 		<footer class="footer">
           <p>&copy; BeneFit 2013</p>
-          <%= link_to 'New Donations', new_donation_path(@st_user), :class => 'pull-right foot' %> <p class="pull-right foot"> | </p>
-          <%= link_to 'Edit', edit_organization_path(@organization), :class => 'pull-right foot' %>
+          <%= link_to 'New Donations', new_donation_path(@st_user) %> |
+          <%= link_to 'Edit', edit_organization_path(@organization) %>
       </footer>
 
 <p>
