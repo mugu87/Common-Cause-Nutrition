@@ -27,6 +27,7 @@
   <div class="span12"> -->
     
     <div class="row" id="mainDiv">
+
       <p id="notice"><%= notice %></p>
       <div class="col-md-12 darkblue">
         
@@ -39,16 +40,16 @@
           <div class="col-md-4 blue3" id="stats">
             <h3 class="centered">STATS</h3>
 
-            <h1><%= @st_user.height %>in</h1>
+            <h1 style="font-family:'nexa_lightregular',Arial,sans-serif;font-size:80px;"><%= @st_user.height %><span style="font-size:20px;vertical-align:super;">in</span></h1>
             <ul class="inline">
               <li>
-                <h1><%= @st_user.weight %>lbs</h1>
+                <h1 style="font-family:'nexa_lightregular',Arial,sans-serif;font-size:80px;"><%= @st_user.weight %><span style="font-size:20px;vertical-align:super;">lbs</span></h1>
               </li>
               <li>
                 <!-- <p>lbs</p> -->
               </li>
             </ul>
-            <h4>Calories</h4>
+            <h4 style="font-family:'nexa_lightregular',Arial, sans-serif;">Calories</h4>
            <!--  <span id="barGraph"> -->
             <ul class="inline barGraph">
               <li class="col-md-4 blue1">
@@ -80,12 +81,14 @@
       <div class="col-md-12 ">
         <div class="row secondRow">
           <div class="col-md-4 blue3">
-            <h3>UPDATES</h3>
-            <p class="updates">Katie just donated her calories to SYRIA</p>
-            <p class="updates">Jim just donated his calories to New Orleans</p>
+            <h3 class="secHeader">UPDATES</h3>
+            <div class="update">
+            <p class="updateText">Katie just donated her calories to SYRIA</p>
+            <p class="updateText">Jim just donated his calories to New Orleans</p>
+            </div>
           </div>
           <div class="col-md-5 blue2">
-            <h3>TEAM PROGRESS</h3>
+            <h3 class="secHeader">TEAM PROGRESS</h3>
             <p id='chart2'></p>
             <%= render_chart(@chart2, 'chart2') %>
             
@@ -97,6 +100,13 @@
           
         </div>
       </div>
+      <footer class="footer">
+              <p>&copy; BeneFit 2013</p>
+            
+      <%= link_to 'New Donations', new_donation_path(@st_user) %> |
+      <%= link_to 'Edit', edit_st_user_path(@st_user.id) %> |
+      <%= link_to 'Back', st_users_path %>
+      </footer>
     </div>
 
 <!--   </div>
@@ -135,8 +145,3 @@
 
 
 
-
-<%= link_to 'New Donations', new_donation_path(@st_user) %>
-
-<%= link_to 'Edit', edit_st_user_path(@st_user.id) %> |
-<%= link_to 'Back', st_users_path %>
