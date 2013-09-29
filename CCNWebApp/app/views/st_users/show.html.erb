@@ -98,6 +98,9 @@
           </div>
           <div class="col-md-3 orange1">
             <h1 class="centered">PAKISTAN</h1>
+            <p>
+  I have lost this much <%= @st_user.get_calories_lost_todate %>
+</p>
           </div>
         </div>
       </div>
@@ -136,6 +139,8 @@
   <strong>Total calorie out:</strong>
   <%= @st_user.total_calorie_out %>
 </p>
+
+
 
 
 <%= link_to 'New Donations', new_donation_path(@st_user) %>
