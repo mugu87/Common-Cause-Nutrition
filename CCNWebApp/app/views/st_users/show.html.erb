@@ -49,11 +49,11 @@
                 <!-- <p>lbs</p> -->
               </li>
             </ul>
-            <h4 style="font-family:'nexa_lightregular',Arial, sans-serif;">Money Donated/Available Calories</h4>
+            <h4 style="font-family:'nexa_lightregular',Arial, sans-serif;">Available Money/Available Calories</h4>
            <!--  <span id="barGraph"> -->
             <ul class="inline barGraph">
-              <li class="col-md-5 blue1">
-                <p>$0.00</p>
+              <li class="col-md-8 blue1">
+              <p>$<%= @st_user.get_money_for_calories_lost %><p>
               </li>
               <li class="col-md-3 darkblue">
                 <p><%= @st_user.get_calories_lost_todate %></p>
@@ -67,13 +67,13 @@
           </div>
           <div class="topRight">
           <div class="col-md-3 orange4">
-            <h3 class="centered">SYRIA</h3>
+            <h3 class="centered"><%= @st_user.get_organizations_list[0][:name] %></h3>
             <div class="text-center">
-            <a href=""><font color="#FFFFFF">See<br> Updates</font></a>
+            <a href="/organizations/1/"><font color="#FFFFFF">See<br> Updates</font></a>
             </div>
           </div>
           <div class="col-md-3 orange3">
-            <h3 class="centered">PAKISTAN</h3>
+            <h3 class="centered"><%= @st_user.get_organizations_list[1][:name] %></h3>
             <div class="text-center">
             <a href=""><font color="#FFFFFF">See<br> Updates</font></a>
             </div>
