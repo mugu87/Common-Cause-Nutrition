@@ -56,7 +56,7 @@ class StUsersController < ApplicationController
     #      ['4/1', 1158]
     #    ])
     team_progress = @user.get_org_total_cal_in_five_days
-    
+
     data_table2.add_rows([
       ['day 1', team_progress[:day_one]],
       ['day 2', team_progress[:day_two]],
@@ -67,17 +67,12 @@ class StUsersController < ApplicationController
 
     option2 = { width: 440, height: 170, backgroundColor: '#3AA88A', 
                 vAxes:[{textStyle:{color:'white'}}],  hAxes:[{textStyle:{color:'white'}}],
-                  legend:{position:'none'}, titleTextStyle:{ color: 'white',  fontSize: 16,},
-                  series: [{color: '#0B534B'}]
-                }
+                legend:{position:'none'}, titleTextStyle:{ color: 'white',  fontSize: 16,},
+                series: [{color: '#0B534B'}]
+    }
     @chart2 = GoogleVisualr::Interactive::AreaChart.new(data_table2, option2)
   end
 
-  # GET /st_users/new
-  def new
-    @st_user = StUser.new
-  end
-
   # GET /st_users/1/edit
   def edit
   end
@@ -121,6 +116,14 @@ class StUsersController < ApplicationController
         format.json { render json: @st_user.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  #update the user's status
+  def update_db
+    new_data = JSON.load(open("https://stark-reef-3410.herokuapp.com/api/show.json"))
+    user_to_update = StUser.find(1) #NOTE use user 1 for now. Must change to something later
+    user_to_update.update_data(new_data["calorie"])
+    render nothing: true
   end
 
   # PATCH/PUT /st_users/1

@@ -27,6 +27,7 @@ CCNWebApp::Application.routes.draw do
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+  get 'st_users/:id/update_db' => 'st_users#update_db', as: :update_status
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

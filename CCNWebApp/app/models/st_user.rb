@@ -61,6 +61,23 @@ class StUser < User
     sum
   end
 
+  #update new data. Data to be updated
+  #1. calorie_in
+  #2. calorie_out
+  #3. weight
+  #4. height
+  #
+  #params: new_data.class.eql?Hash
+  def update_data (new_data)
+    new_cal = self.calories.build
+    new_cal.intake = new_data["calorie_in"] 
+    new_cal.outtake = new_data["calorie_out"]
+    self.weight = new_data["weight"]
+    self.height = new_data["height"]
+    self.save
+    new_cal.save
+  end
+
   #returns hash.Eg: {:day_one => 1, :day_two => 2, ..., :day_five => 5}
   def get_org_total_cal_in_five_days
     five_day_ago = Time.now - 5.days
@@ -87,7 +104,7 @@ class StUser < User
 
   #note: can be done in the views
   def get_organizations_list
-    Organization.all
+    return Organization.all
   end
 
   def get_money_donated
