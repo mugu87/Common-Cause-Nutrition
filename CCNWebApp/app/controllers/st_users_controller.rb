@@ -120,7 +120,7 @@ class StUsersController < ApplicationController
 
   #update the user's status
   def update_db
-    new_data = JSON.load(open("https://stark-reef-3410.herokuapp.com/api/show.json"))
+    new_data = JSON.load(open("https://stark-reef-3410.herokuapp.com/api/show.JSON"))
     user_to_update = StUser.find(1) #NOTE use user 1 for now. Must change to something later
     user_to_update.update_data(new_data["calorie"])
     render nothing: true
